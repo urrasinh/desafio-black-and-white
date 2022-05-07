@@ -9,8 +9,9 @@ Está apliación está basado en los siguientes capítulos de la lectura del mó
 
 ***
 ## Instrucciones
-_Nodemon fue instalado de manera global al crear este proyecto_ <br />
-_NOTA: Se debe usar la linea: npm install -g nodemon_
+_NOTA 1: Nodemon fue instalado de manera global al crear este proyecto <br /> 
+NOTA 2: Para iniciar el servidor se debe utilizar la linea: nodemon access.js login -p=123  
+NOTA 3: Luego de iniciar el servidor entra en la url http://localhost:3000/_
 
 ## Dependencias Utilizadas ##
 
