@@ -1,17 +1,13 @@
-// constante el paquete child_process
 const yargs = require('yargs')
-
-// constante el paquete child_process
 const child = require('child_process')
 
 // Definir las credenciales de acceso
 const key = '123'
 const argv = yargs
     .command(
-        // Paso 3
-        'login',
-        // Paso 4
-        'Comando para acceder',
+              'login',
+       
+        'Comando para acceder para modificar una imagen',
         {
             
             key: {
@@ -21,14 +17,17 @@ const argv = yargs
             }
         },
         (args) => {
-            // Paso 7
-            args.key == key
-                ? // Paso 8
+            if (args.key == key) {
                 child.exec('node index.js', (err, stdout) => {
-                    err ? console.log(err) : console.log(stdout)
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        console.log(stdout)
+                    }
                 })
-                : // Paso 9
+            } else {
                 console.log('Credenciales incorrectas')
+            }
         }
     )
     .help().argv
